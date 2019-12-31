@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "话题首页",
+  "usingComponents": {
+    "topics": "/components/topicItem/topicItem"
+  }
+}

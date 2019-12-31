@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/my/my",
+    "pages/my_status/my_status",
+    "pages/my_send/my_send",
+    "pages/my_collect/my_collect",
+    "pages/my_follow/my_follow",
+    "pages/column/column",
+    "pages/created/created",
+    "pages/category/category",
+    "pages/answer/answer",
+    "pages/topic/topic",
+    "pages/my_data/my_data",
+    "components/topicItem/topicItem",
+    "components/answerItem/answerItem",
+    "pages/banner/banner"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "parenting",
+    "navigationBarTextStyle": "black",
+    "onReachBottomDistance": 50
+  },
+  "tabBar": {
+    "color": "#cdcdce",
+    "selectedColor": "#FF6347",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "话题",
+        "iconPath": "image/topic.png",
+        "selectedIconPath": "image/topic-select.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "image/my.png",
+        "selectedIconPath": "image/my-select.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

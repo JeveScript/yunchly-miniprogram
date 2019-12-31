@@ -1,0 +1,23 @@
+<view class="container">
+  <view class="topic-container">
+    <navigator class="category"  url="/pages/category/category?id={{topicData.category_id}}">
+      <image class="category-logo" src="../../image/topic-select.png"></image>
+      <view class="category-name">{{topicData.name}} ></view>
+    </navigator>
+    <view class="topic-title">{{topicData.title}}</view>
+    <view class="topic-text">{{topicData.text}}
+    </view>
+    <view class="topic-handle">
+      <view class="topic-see">{{topicData.pv}} 查看</view>
+      <view>{{topicData.follow}} 关注</view>
+      <view class="topic-follow" bindtap="handleFollow">关注话题</view>
+    </view>
+  </view>
+  <view class="answer-container">
+    <view class="answer-number">共有 {{topicData.answer_num}} 个回答</view>
+    <answer answerData="{{answerData}}" 
+    bindeventPraise="handlePraise"
+    bindeventUnPraise="handleUnPraise"></answer>
+  </view>
+  <navigator class="send-answer" open-type="redirect" url="/pages/created/created?id={{topicData.id}}">发布回答</navigator>
+</view>

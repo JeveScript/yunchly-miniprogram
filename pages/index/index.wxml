@@ -1,0 +1,42 @@
+<view class="container">
+  <swiper class="swiper-container"
+    indicator-dots
+    indicator-color="rgba(245, 255, 250, 0.4)"
+    indicator-active-color="#fff"
+    autoplay
+    circular
+    >
+    <swiper-item
+      wx:for="{{bannerData}}"
+      wx:key="{{item.id}}">
+      <navigator class="swiper-item"
+        url="/pages/banner/banner?id={{item.id}}">
+        <image class="swiper-image" src="{{item.image_url}}"></image>
+      </navigator>
+    </swiper-item>
+  </swiper>
+  <scroll-view class="album"
+    scroll-x="true"
+    enable-flex="true">
+    <navigator class="album-item" 
+      wx:for="{{columnData}}"
+      wx:key="{{item.id}}"
+      url="/pages/column/column?id={{item.id}}">
+      <image src="{{item.image_url}}" class="album-image"></image>
+      <text class="album-text">{{item.title}}</text>
+    </navigator>
+  </scroll-view>
+  <view class="topic-container">
+    <view class="topic-tab">
+      <view class="topic-recomme {{recomme ? 'active' : none}}" bindtap="handleRecomme">推荐</view>
+      <view class="topic-answer {{recomme ? none : 'active'}}" bindtap="handleAnswer">答题</view>
+      <navigator class="topic-tab-tips" url="/pages/category/category?id=0">全部话题</navigator>
+    </view>
+    <scroll-view class="recomme-container" hidden="{{!recomme}}">
+      <topics topicData="{{recommeData}}"></topics>
+    </scroll-view>
+    <scroll-view class="answer-container" hidden="{{recomme}}">
+      <topics topicData="{{answerData}}"></topics>
+    </scroll-view>
+  </view>
+</view>
