@@ -3,6 +3,6 @@
     style="height:auto"
     id="editor-banner"
     read-only 
-    bindready="onEditorReady">
+    bindstatuschange="onEditorReady">
   </editor>
 </view>

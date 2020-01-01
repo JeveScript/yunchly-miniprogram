@@ -8,6 +8,7 @@ Page({
     answerData:{},
     inputValue:'',
     replyData:[],
+    allShow:false,
     replyShow:[],
     replyActive:true,
     sendActive:false
@@ -25,11 +26,17 @@ Page({
       data: { user_id },
       success:res=>{
         let replyShow = res.data.data.reply.slice(0,2)
+        let allShow = this.data.allShow
+        if(res.data.data.reply.length > 2){
+          allShow = true
+        }
         this.setData({
           answerData:res.data.data.answer,
           replyShow,
+          allShow,
           replyData:res.data.data.reply
         })
+        this.onEditorReady()
       }
     })
   },

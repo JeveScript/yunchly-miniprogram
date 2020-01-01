@@ -2,7 +2,7 @@
 (function() {
 
 var config = {
-    qiniuUploadURL: '',
+    qiniuUploadURL: 'http://upload-z2.qiniup.com',
     qiniuImageURLPrefix: '',
     qiniuUploadToken: '',
     qiniuUploadTokenURL: '',

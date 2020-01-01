@@ -95,10 +95,15 @@ Page({
       data: { state},
       success: res => {
         if (res.data.code === 200) {
-          wx.showToast({
-            title: res.data.message,
-            icon: 'none',
-            duration: 2000
+          wx.switchTab({
+            url:"/pages/my/my",
+            success:()=>{
+              wx.showToast({
+                title: res.data.message,
+                icon: 'none',
+                duration: 2000
+              })
+            }
           })
         }
       }

@@ -1,7 +1,7 @@
 <view class="container">
   <view class="user-info">
     <block wx:if="{{login}}">
-      <image class="userInfo-image" src="{{userInfo.avatarUrl}}"></image>
+      <image class="userInfo-image" mode="aspectFill" src="{{userInfo.avatarUrl}}"></image>
       <navigator open-type="redirect" class="userInfo-name" url="/pages/my_data/my_data">{{userInfo.nickName}}
         <image class="userInfo-edit" src="../../image/user-edit.png"></image>
       </navigator>

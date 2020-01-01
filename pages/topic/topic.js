@@ -36,6 +36,9 @@ Page({
           icon: 'none',
           duration: 2000
         })
+        if(res.data.code === 200){
+          this.getData(topic_id)
+        }
       }
     })
   },

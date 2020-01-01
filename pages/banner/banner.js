@@ -11,6 +11,7 @@ Page({
         this.setData({
           bannerData:res.data.data.content
         })
+        this.onEditorReady()
       }
     })
   },

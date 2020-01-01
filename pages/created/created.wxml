@@ -9,6 +9,6 @@
   bindready="onEditorReady"
   placeholder="分享你的真实观点和经验，可以帮助到别的妈妈哦~"
   class="create-editor"
-  bindinput='editorInput'>
+  bindstatuschange='editorInput'>
   </editor>
 </view>

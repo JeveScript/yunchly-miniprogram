@@ -12,7 +12,7 @@
     style="height:auto"
     id="editor-single"
     read-only 
-    bindready="onEditorReady">
+    bindstatuschange="onEditorReady">
   </editor>
   <view class="answer-time">编辑于 {{answerData.create_time}}</view>
   <view class="answer-footer">
@@ -58,12 +58,13 @@
         </view>
       </view>
     </block>
-    <view class="reply-more" bindtap="handleAll">查看全部({{replyData.length}})</view>
+    <view class="reply-more" bindtap="handleAll" wx:if="{{allShow}}">查看全部({{replyData.length}})</view>
     <view class="reply-send">
       <input class="reply-input"
       placeholder="谢谢你那么好看还给我评论~"
       placeholder-style="color:#C0C0C0"
-      bindinput="handleInput"></input>
+      bindstatuschange="handleInput"
+      value="{{inputValue}}"></input>
       <view class="{{sendActive ? 'reply-btn active' : 'reply-btn'}}" bindtap="handleSend">发送</view>
     </view>
   </view>
