@@ -25,5 +25,11 @@ Page({
         })
       }
     })
+  },
+  handleCategory(e){
+    let id = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: `/pages/category/category?id=${id}`,
+    })
   }
 })

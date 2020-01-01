@@ -15,7 +15,11 @@
       <view class="column-content">
         <view class="column-text">{{item.title}}</view>
         <view class="column-handle">
-          <navigator class="column-category" url="/pages/category/category?id={{item.category_id}}"># {{item.name}}</navigator>
+          <view class="column-category"
+          data-id="{{item.category_id}}"
+          catchtap="handleCategory">
+            # {{item.name}}
+          </view>
           <view class="column-pv">
             <text class="column-pv-item">{{item.answer_num}} 回答</text>
             <text class="column-pv-item">{{item.pv}} 浏览</text>
