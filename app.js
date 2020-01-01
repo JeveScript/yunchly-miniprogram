@@ -50,7 +50,19 @@ App({
               }
             })
           } else {
-            console.log('用户未授权')
+            wx.showModal({
+              content: '您暂未授权，是否授权',
+              confirmColor: '#72bd4a',
+              success: res => {              
+                if (res.confirm) {
+                  wx.openSetting({
+                    success(res){
+                      console.log(!!res.authSetting['scope.userInfo'] ? '设置成功' : '设置失败');
+                    },
+                  });
+                }
+              }
+            });
           }
         }
       })

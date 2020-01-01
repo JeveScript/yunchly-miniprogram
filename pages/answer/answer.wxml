@@ -5,7 +5,7 @@
     <navigator class="answer-send" open-type="redirect" url="/pages/created/created?id={{answerData.topic_id}}">发布回答</navigator>
   </view>
   <view class="user-container">
-    <image class="user-avatar" src="{{answerData.avatar}}"></image>
+    <image class="user-avatar" src="{{answerData.avatar}}" mode="aspectFill"></image>
     <view class="user-name">{{answerData.nick_name}}</view>
   </view>
   <editor class="answer-text"
@@ -37,8 +37,8 @@
     <block wx:if="{{replyActive}}">
       <view class="reply-item"
         wx:for="{{replyShow}}"
-        wx:key="{{item.id}}">
-        <image class="user-avatar" src="{{item.avatar}}"></image>
+        wx:key="index">
+        <image class="user-avatar" src="{{item.avatar}}" mode="aspectFill"></image>
         <view class="reply-content">
           <view class="reply-user-name">{{item.nick_name}}</view>
           <view class="reply-time">{{item.create_time}}</view>
@@ -49,8 +49,8 @@
     <block wx:else>
       <view class="reply-item"
         wx:for="{{replyData}}"
-        wx:key="{{item.id}}">
-        <image class="user-avatar" src="{{item.avatar}}"></image>
+        wx:key="index">
+        <image class="user-avatar" src="{{item.avatar}}" mode="aspectFill"></image>
         <view class="reply-content">
           <view class="reply-user-name">{{item.nick_name}}</view>
           <view class="reply-time">{{item.create_time}}</view>

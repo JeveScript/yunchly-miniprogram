@@ -10,7 +10,7 @@
       <view class="topic-list">
         <navigator class="topic-item"
           wx:for="{{topicData}}"
-          wx:key="{{item.id}}"
+          wx:key="index"
           url="/pages/topic/topic?id={{item.id}}">
           <view class="topic-title">{{item.title}}</view>
           <view class="topic-user">

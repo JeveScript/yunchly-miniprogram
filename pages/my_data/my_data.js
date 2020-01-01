@@ -43,14 +43,25 @@ Page({
             data: { avatar: imageUrl },
             success:res=>{
               if(res.data.code===200){
+                app.globalData.userInfo.avatarUrl = imageUrl
+                let userInfo = app.globalData.userInfo
+                wx.setStorageSync('userInfo', userInfo);
+                wx.switchTab({
+                  url:"/pages/my/my",
+                  success:()=>{
+                    wx.showToast({
+                      title: res.data.message,
+                      icon: 'none',
+                      duration: 2000
+                    })
+                  }
+                })
+              }else{
                 wx.showToast({
                   title: res.data.message,
                   icon: 'none',
                   duration: 2000
                 })
-                app.globalData.userInfo.avatarUrl = imageUrl
-                let userInfo = app.globalData.userInfo
-                wx.setStorageSync('userInfo', userInfo);
               }
             }
           })

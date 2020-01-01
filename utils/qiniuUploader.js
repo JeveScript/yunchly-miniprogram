@@ -2,7 +2,7 @@
 (function() {
 
 var config = {
-    qiniuUploadURL: 'http://upload-z2.qiniup.com',
+    qiniuUploadURL: 'https://upload-z2.qiniup.com',
     qiniuImageURLPrefix: '',
     qiniuUploadToken: '',
     qiniuUploadTokenURL: '',
@@ -18,7 +18,7 @@ module.exports = {
 // 如果需要变更参数，再调用 init 即可
 function init(options) {
     config = {
-        qiniuUploadURL: 'http://upload-z2.qiniup.com',
+        qiniuUploadURL: 'https://upload-z2.qiniup.com',
         qiniuImageURLPrefix: '',
         qiniuUploadToken: '',
         qiniuUploadTokenURL: '',

@@ -8,7 +8,7 @@
     >
     <swiper-item
       wx:for="{{bannerData}}"
-      wx:key="{{item.id}}">
+      wx:key="index">
       <navigator class="swiper-item"
         url="/pages/banner/banner?id={{item.id}}">
         <image class="swiper-image" src="{{item.image_url}}"></image>
@@ -20,7 +20,7 @@
     enable-flex="true">
     <navigator class="album-item" 
       wx:for="{{columnData}}"
-      wx:key="{{item.id}}"
+      wx:key="index"
       url="/pages/column/column?id={{item.id}}">
       <image src="{{item.image_url}}" class="album-image"></image>
       <text class="album-text">{{item.title}}</text>

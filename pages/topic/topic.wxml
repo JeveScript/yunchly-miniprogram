@@ -1,7 +1,7 @@
 <view class="container">
   <view class="topic-container">
     <navigator class="category"  url="/pages/category/category?id={{topicData.category_id}}">
-      <image class="category-logo" src="../../image/topic-select.png"></image>
+      <image class="category-logo" src="../../image/topic-select.png" mode="aspectFill"></image>
       <view class="category-name">{{topicData.name}} ></view>
     </navigator>
     <view class="topic-title">{{topicData.title}}</view>

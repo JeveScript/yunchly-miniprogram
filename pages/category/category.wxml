@@ -11,7 +11,7 @@
       <view id="swiper-tab-item-{{item.id}}"
       class="swiper-tab-item {{swiperTabIndex===item.id ? 'active' : none}}"
       wx:for="{{category}}"
-      wx:key="{{item.id}}"
+      wx:key="index"
       data-id="{{item.id}}"
       bindtap="getData"
       >{{item.name}}</view>
