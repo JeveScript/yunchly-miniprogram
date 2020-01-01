@@ -58,13 +58,16 @@
 .login{
   position: absolute;
   top: 50rpx;
-  right: 0;
-  font-size: 30rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 32rpx;
+  color: #3D4C54;
   width: 250rpx;
-  height: 130rpx;
+  height: 90rpx;
   text-align: center;
-  line-height: 130rpx;
-  border-top-left-radius: 40rpx;
-  border-bottom-left-radius: 40rpx;
-  background-color: rgba(148, 112, 219, 0.4);
+  line-height: 90rpx;
+  background-color: #fff;
+}
+button::after{
+  border: 1rpx solid #696969;
 }
