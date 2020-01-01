@@ -71,3 +71,8 @@
 button::after{
   border: 1rpx solid #696969;
 }
+.navigator-hover{
+  opacity: .8;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+  

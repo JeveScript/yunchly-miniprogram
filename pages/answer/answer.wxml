@@ -63,7 +63,7 @@
       <input class="reply-input"
       placeholder="谢谢你那么好看还给我评论~"
       placeholder-style="color:#C0C0C0"
-      bindstatuschange="handleInput"
+      bindinput="handleInput"
       value="{{inputValue}}"></input>
       <view class="{{sendActive ? 'reply-btn active' : 'reply-btn'}}" bindtap="handleSend">发送</view>
     </view>

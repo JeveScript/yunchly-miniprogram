@@ -10,8 +10,7 @@ Page({
     replyData:[],
     allShow:false,
     replyShow:[],
-    replyActive:true,
-    sendActive:false
+    replyActive:true
   },
   onLoad: function (options) {
     this.setData({
@@ -134,11 +133,8 @@ Page({
   },
   handleInput(e){
     let value = e.detail.value
-    let send
-    value.trim() ? send=true : send=false
     this.setData({
       inputValue: value,
-      sendActive: send
     })
   },
   handleSend(){
