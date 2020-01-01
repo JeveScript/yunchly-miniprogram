@@ -10,7 +10,7 @@ App({
       this.globalData.user_id = user_id;
       return
     }
-    this.login()
+    // this.login()
   },
   login: function(){
     return new Promise((resolve, reject)=>{
