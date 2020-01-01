@@ -1,7 +1,7 @@
 // const MODE = 'devlopment'   //开发环境
 const MODE = 'production'   //上线环境
 
-const DEVELOPMENT_PREFIX = 'http://localhost:3000/api';
+const DEVELOPMENT_PREFIX = 'http://localhost:3002/api';
 const PRODUCTION_PREFIX = 'https://api.yunchly.zakesi.com/api';
 
 const VERSION = 'V0.0.1';  //版本型号
@@ -15,6 +15,7 @@ export default {
   wxTopic: `${PREFIX}/wxTopic`,
   wxTopiPv: `${PREFIX}/wxTopiPv`,
   wxPraise: `${PREFIX}/wxPraise`,
+  wxUnFollow: `${PREFIX}/wxUnFollow`,
   wxUnPraise: `${PREFIX}/wxUnPraise`,
   wxTopicTitle: `${PREFIX}/wxTopicTitle`,
   wxAnswer: `${PREFIX}/wxAnswer`,

@@ -7,7 +7,25 @@
   </block>
   <block wx:else>
     <scroll-view>
-      <topics topicData="{{topicData}}"></topics>
+      <view class="topic-list">
+        <navigator class="topic-item"
+          wx:for="{{topicData}}"
+          wx:key="{{item.id}}"
+          url="/pages/topic/topic?id={{item.id}}">
+          <view class="topic-title">{{item.title}}</view>
+          <view class="topic-user">
+            <view class="user-handle">
+              <view class="topic-follow">{{item.follow}} 关注</view>
+              <view class="topic-reply">{{item.answer_num}} 回答</view>
+            </view>
+            <view class="user-cancel" 
+              data-id="{{item.id}}"
+              catchtap="handleCancel">
+              取消关注
+            </view>
+          </view>
+        </navigator>
+      </view>
     </scroll-view>
   </block>
 </view>
