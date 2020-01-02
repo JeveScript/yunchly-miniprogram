@@ -10,9 +10,17 @@ Page({
     replyData:[],
     allShow:false,
     replyShow:[],
-    replyActive:true
+    replyActive:true,
+    sendActive:false
   },
   onLoad: function (options) {
+    const eventChannel = this.getOpenerEventChannel();
+    eventChannel.on('scrollToBottom',()=>{
+      wx.pageScrollTo({
+        scrollTop: 9999,
+        duration: 300
+      })
+    })
     this.setData({
       answer_id: options.id
     })
@@ -132,9 +140,12 @@ Page({
     })
   },
   handleInput(e){
-    let value = e.detail.value
+    let value = e.detail.value;
+    let send
+    value.trim() ? send=true : send=false
     this.setData({
       inputValue: value,
+      sendActive: send
     })
   },
   handleSend(){

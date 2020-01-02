@@ -10,7 +10,9 @@
       <text class="answer-text">{{item.text}}</text>
     </navigator>
     <view class="answer-handle">
-      <view class="answer-reply">
+      <view class="answer-reply"
+        data-id="{{item.id}}"
+        catchtap="handleReply">
         <image class="reply-logo" src="../../image/reply.png" mode="aspectFill"></image>
         <view class="reply-number">{{item.replyTotal}}</view>
       </view>

@@ -36,6 +36,15 @@ Component({
       })
       let index = e.currentTarget.dataset.index
       this.triggerEvent('eventUnPraise',index)
+    },
+    handleReply(e){
+      let id = e.currentTarget.dataset.id;
+      wx.navigateTo({
+        url: `/pages/answer/answer?id=${id}`,
+        success:(res)=>{
+          res.eventChannel.emit('scrollToBottom')
+        }
+      })
     }
   }
 })
